@@ -1,7 +1,14 @@
-# ชุดผู้เรียน · RAG และ LLM ด้วย Claude Code + GitHub (6 ชั่วโมง)
+# RAG Workshop · Claude Code + GitHub (ไม่ใช้ API credit)
 
-- `rag-workshop-starter/` repo เริ่มต้น: push ขึ้น GitHub ของตัวเอง แล้วเปิดใน Claude Code (claude.ai/code หรือในเครื่อง)
-- `PROMPTS.md` prompt ของทุกเวิร์กช็อป เรียงตามเวลา
+ระบบถามตอบเอกสารบริษัทสมมติ "นาวา ดิจิทัล" สร้างด้วย Claude Code
+การค้นคืนทำงานในเครื่องด้วย Python ส่วนการเขียนคำตอบทำโดย Claude Code ผ่าน skill `/ask`
 
-ทั้งวันไม่ต้องใช้ API key: การค้นคืนเป็น Python ส่วนการเขียนคำตอบทำโดย Claude Code
-เอกสารบริษัท "นาวา ดิจิทัล" ทั้งหมดเป็นของสมมติ
+```bash
+pip install -r requirements.txt
+pytest -q
+python -m rag.retrieve "เบิกค่าทำฟันได้เท่าไร" -k 4
+```
+
+ใน Claude Code: `/ask ทำงานจากที่บ้านได้กี่วัน` · `/ask-eval dev 10`
+
+ข้อมูลทั้งหมดเป็นของสมมติ
